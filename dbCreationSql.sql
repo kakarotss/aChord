@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS chords;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS users;
 
+
 Create database if not exists ache ;
 
 
@@ -41,6 +42,7 @@ CREATE TABLE courseLine(
 courseLineId INT AUTO_INCREMENT,
 courseId INT,
 userId INT,
+courseStatus VARCHAR(50),
 primary key(courseLineId),
 foreign key(courseId) references course(courseId),
 foreign key(userId) references users(userId)
