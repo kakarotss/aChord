@@ -129,7 +129,8 @@ nav > div a.nav-item.nav-link:focus
 }
 
 .footerPos {
-    min-height: 57vh;
+    /*background-color: #6c757d;*/
+    min-height: 30vh;
     position: relative;
     margin: 0;
 }
@@ -158,4 +159,8 @@ nav > div a.nav-item.nav-link:focus
 #cardheight{
     min-height: 13vw;
     max-height: 13vw;
+}
+
+.hr1{
+    height:1px; border:none; color:rgb(60,90,180); background-color:rgb(207, 207, 207);
 }

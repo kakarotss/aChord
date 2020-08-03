@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Login</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="Stylesheet.css">
     <script src="https://kit.fontawesome.com/f687ca6f88.js" crossorigin="anonymous" ></script>
@@ -13,7 +13,7 @@
 
 <header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color: #3e4551 ;">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #3e4551 ;">
         <a class="navbar-brand" href="Index.html"><img src="logo1.png" ></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@
 
             <ul class="nav navbar-nav navbar-right ">
                 <li>
-                    <a class="nav-link" href="Login.html"><h5><i style="color: white" class="fas fa-user fa-fw"></i>Login/Register</h5><span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="login.php"><h5><i style="color: white" class="fas fa-user fa-fw"></i>Login/Register</h5><span class="sr-only">(current)</span></a>
                 </li>
 
 
@@ -66,8 +66,8 @@
         </div>
     </nav>
 
-    <nav style="background-image: linear-gradient(#3e4551, #2f353e);" class="navbar navbar-expand-lg navbar-secondary  justify-content-center ">
-        <h2  class="text-light"><i style="color: white" class="fas fa-check-circle fa-fw"></i>Learn at Your Own aChord</h2>
+    <nav style="background-image: linear-gradient(#3e4551, #2f353e);" class="navbar navbar-expand-lg navbar-secondary justify-content-center ">
+        <h2  class="text-light"><i style="color: white" class="fas fa-sign-in-alt fa-fw"></i>Login Here</h2>
     </nav>
 
 </header>
@@ -75,34 +75,44 @@
 
 <body style="background-color: #7B8390">
 
-<div class="carousel h-50" data-flickity='{ "autoPlay": 1000, "wrapAround": true}'>
+<!--<hr class="hr1">-->
 
-    <div class="carousel-cell">
-        <img id="image" src="0.jpg" class="carousel-cell-image" alt="...">
+<div class="container text-center">
 
-    </div>
-    <div class="carousel-cell">
-        <img id="image" src="1.jpg" class="carousel-cell-image" alt="...">
+    <div class="row justify-content-center" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
-    </div>
-    <div class="carousel-cell">
-        <img id="image" src="2.jpg" class="carousel-cell-image" alt="...">
+            <fieldset>
+                <h2 style="color: white">Log in Using Your Existing Account</h2>
+<!--                <form method="post">-->
+
+                    <hr>
+                    <div class="form-group">
+                        <input type="text"name="username"  placeholder="Username" class="form-control input-lg" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password"name="password" placeholder="Password" class="form-control input-lg" required/>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="submit" name="login" class="btn btn-lg btn-light btn-block" value="Login">
+                        </div>
+<!--                </form>-->
+                <div class="form-group col-md-6">
+                    <a href="Register.html" class="btn btn-lg btn-danger btn-block">Register</a>
+                </div>
+        </div>
+        </fieldset>
 
     </div>
 </div>
 
-<div >
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+</div>
+
+
+
 
 </div>
 
