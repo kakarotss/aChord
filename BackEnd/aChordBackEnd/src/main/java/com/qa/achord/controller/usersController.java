@@ -19,11 +19,18 @@ public class usersController {
 	usersService userService;
 	
 	@PostMapping("/Register")
-	public String insertForm(@RequestBody users user) {
+	public String registration(@RequestBody users user) {
 		
 		userService.register(user);
 		return "User registered: "+ user.getUsername();
 		
+	}
+	
+	@PostMapping("/Login")
+	public String signin(@RequestBody users user) {
+		
+		
+		return "Status: "+ userService.login(user);	
 	}
 
 }

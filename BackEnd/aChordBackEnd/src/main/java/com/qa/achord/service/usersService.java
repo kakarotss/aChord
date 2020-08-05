@@ -12,12 +12,38 @@ public class usersService {
 	@Autowired
 	usersRepo userRepo;
 	
+	String message = "unknown";
+	
 	public String register(users user) {
+		userRepo.save(user);
 		
+		if(userRepo.findByUsername(user.getUsername()).isEmpty()) {
+			message = "Registration failed, please try again";
+		}
+		else {
+			message = user.getUsername()+" Registered";
+		}
 		//need check if it actually has been inserted probably using optional
-		return ""+userRepo.save(user);
+		return message;
 	}
 	
+	
+	public String login(users user) {
+		
+		
+		if(userRepo.login(user.getUsername(), user.getUserPassword()).isEmpty()) {
+			message = "Incorrect username or password";
+			
+		}
+		else {
+			userRepo.login(user.getUsername(), user.getUserPassword());
+			message = "Logged in successfully";
+			
+			
+		}
+		
+		return message;
+	}
 	
 
 }
