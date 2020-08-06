@@ -28,7 +28,6 @@ public class usersController {
 	
 	@PostMapping("/Register")
 	public String registration(@RequestBody users user) {
-		
 		userService.register(user);
 		return "User registered: "+ user.getUsername();
 		
@@ -36,8 +35,6 @@ public class usersController {
 	
 	@PostMapping("/Login")
 	public String signin(@RequestBody users user) {
-		
-		
 		return "Status: "+ userService.login(user);	
 	}
 	
@@ -61,9 +58,7 @@ public class usersController {
 	
 	@PostMapping("/addUsers")
 	public String adminAdd(@RequestBody users user) {
-		
-		adminUserService.adminAddUser(user);
-		return null;
+		return adminUserService.adminAddUser(user);
 		
 	}
 	
