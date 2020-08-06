@@ -1,5 +1,7 @@
 package com.qa.achord.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,6 +45,11 @@ public class usersService {
 		}
 		
 		return message;
+	}
+	
+public List <users> myProfile(users user) {
+		
+		return userRepo.userProfile(user.getUsername());
 	}
 	
 
