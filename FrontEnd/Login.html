@@ -9,6 +9,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="flickity/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="flickity/flickity.css">
+    <script src="JS/login.js"></script>
 </head>
 
 <header>
@@ -36,13 +37,6 @@
 
 
             </ul>
-
-
-
-
-
-
-
 
             <form class="form-inline my-2 my-lg-0" style="margin-right: 1%" action="search.php">
                 <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
@@ -88,16 +82,16 @@
 
                     <hr>
                     <div class="form-group">
-                        <input type="text"name="username"  placeholder="Username" class="form-control input-lg" required>
+                        <input type="text"name="username" id="username"  placeholder="Username" class="form-control input-lg" required>
                     </div>
                     <div class="form-group">
-                        <input type="password"name="password" placeholder="Password" class="form-control input-lg" required/>
+                        <input type="password"name="password" id="password" placeholder="Password" class="form-control input-lg" required/>
                     </div>
 
                     <hr>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <input type="submit" name="login" class="btn btn-lg btn-light btn-block" value="Login">
+                            <input type="submit" onclick="login()" name="login" class="btn btn-lg btn-light btn-block" value="Login">
                         </div>
 <!--                </form>-->
                 <div class="form-group col-md-6">

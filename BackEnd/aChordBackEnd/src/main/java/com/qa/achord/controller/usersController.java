@@ -34,8 +34,8 @@ public class usersController {
 	}
 	
 	@PostMapping("/Login")
-	public String signin(@RequestBody users user) {
-		return "Status: "+ userService.login(user);	
+	public List <users> signin(@RequestBody users user) {
+		return userService.login(user);	
 	}
 	
 	@GetMapping("/myProfile")

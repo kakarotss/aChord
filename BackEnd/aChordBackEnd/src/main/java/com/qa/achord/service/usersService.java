@@ -1,5 +1,6 @@
 package com.qa.achord.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,21 +31,22 @@ public class usersService {
 	}
 	
 	
-	public String login(users user) {
+	public List login(users user) {
 		
-		
+		List <users> sommin = new ArrayList<users>();
 		if(userRepo.login(user.getUsername(), user.getUserPassword()).isEmpty()) {
 			message = "Incorrect username or password";
 			
 		}
 		else {
-			userRepo.login(user.getUsername(), user.getUserPassword());
-			message = "Logged in successfully";
+			sommin = userRepo.login(user.getUsername(), user.getUserPassword());
+			message = "Logged in";
 			
 			
 		}
+		System.out.println(message);
 		
-		return message;
+		return sommin;
 	}
 	
 public List <users> myProfile(users user) {
