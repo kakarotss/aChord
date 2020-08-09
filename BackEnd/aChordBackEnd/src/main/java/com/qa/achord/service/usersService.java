@@ -42,7 +42,6 @@ public class usersService {
 			sommin = userRepo.login(user.getUsername(), user.getUserPassword());
 			message = "Logged in";
 			
-			
 		}
 		System.out.println(message);
 		

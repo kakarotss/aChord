@@ -164,3 +164,7 @@ nav > div a.nav-item.nav-link:focus
 .hr1{
     height:1px; border:none; color:rgb(60,90,180); background-color:rgb(207, 207, 207);
 }
+
+.myClickable {
+    cursor: pointer;
+}
