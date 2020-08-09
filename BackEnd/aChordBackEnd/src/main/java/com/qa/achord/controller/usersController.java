@@ -38,7 +38,7 @@ public class usersController {
 		return userService.login(user);	
 	}
 	
-	@GetMapping("/myProfile")
+	@PostMapping("/myProfile")
 	public List<users> myProfile(@RequestBody users user) {
 		return userService.myProfile(user);
 	}
