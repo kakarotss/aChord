@@ -27,9 +27,9 @@ public class usersController {
 	adminUserService adminUserService;
 	
 	@PostMapping("/Register")
-	public String registration(@RequestBody users user) {
-		userService.register(user);
-		return "User registered: "+ user.getUsername();
+	public List <users> registration(@RequestBody users user) {
+		
+		return userService.register(user);
 		
 	}
 	

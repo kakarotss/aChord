@@ -17,21 +17,23 @@ public class usersService {
 	
 	String message = "unknown";
 	
-	public String register(users user) {
+	public List <users> register(users user) {
 		userRepo.save(user);
+		List <users> reg = new ArrayList<users>();
 		
 		if(userRepo.findByUsername(user.getUsername()).isEmpty()) {
 			message = "Registration failed, please try again";
 		}
 		else {
 			message = user.getUsername()+" Registered";
+			reg = userRepo.findByUsername(user.getUsername());
 		}
 		//need check if it actually has been inserted probably using optional
-		return message;
+		return reg;
 	}
 	
 	
-	public List login(users user) {
+	public List<users> login(users user) {
 		
 		List <users> sommin = new ArrayList<users>();
 		if(userRepo.login(user.getUsername(), user.getUserPassword()).isEmpty()) {

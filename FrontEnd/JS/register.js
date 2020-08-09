@@ -1,22 +1,28 @@
 
-function login() {
+function register() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let email = document.getElementById("email").value;
 
-    fetch(`http://localhost:9000/aChord/Login`, {
+    fetch(`http://localhost:9000/aChord/Register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
             "username": username,
-            "userPassword": password
+            "userPassword": password,
+            "email": email,
+            "firstName": firstName,
+            "lastName": lastName
         })
     })
         .then(
             function(response) {
                 if (response.status !== 200) {
-                    console.log('Login failed please try again. Status Code: ' +
+                    console.log('Register failed please try again. Status Code: ' +
                         response.status);
                     return;
                 }
@@ -28,7 +34,6 @@ function login() {
                             sessionStorage.setItem("LoggedInUsername", data[i].username);
                             sessionStorage.setItem("LoggedInId", data[i].userId);
                             window.location.href = "Index.html";
-                            console.log("passed");
 
                         }
                     }
