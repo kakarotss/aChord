@@ -1,0 +1,9 @@
+.settings/
+.classpath
+.project
+log-file.log
+*/.idea/workspace.xml
+
+
+
+/bin/
