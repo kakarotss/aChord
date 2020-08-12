@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="54ed7fb7-8c49-42df-895a-cc29223033e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/myProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/myProfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="myProfile.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/JS/myProfile.js" working-dir="$PROJECT_DIR$/JS">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.myProfile.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,6 +75,8 @@
       <workItem from="1596805186476" duration="4957000" />
       <workItem from="1596997727481" duration="12545000" />
       <workItem from="1597083878519" duration="2496000" />
+      <workItem from="1597171445893" duration="2034000" />
+      <workItem from="1597232769790" duration="6807000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,12 @@
 $(function() {
-    getAll();
+    console.log(getAll());
 });
 
+
+
 function getAll() {
+
+let result ="";
     // document.getElementById("tbody").innerHTML="";
     fetch('http://localhost:9000/aChord/myProfile', {
         method: "POST",
@@ -24,6 +28,13 @@ function getAll() {
                 response.json().then(function(data) {
                     // console.log("asda" +sessionStorage.getItem("loggedInUsername"));
                     console.log(data);
+                    let emaill = data[0].email;
+                    console.log(data[0].email);
+                    console.log(emaill);
+
+                    result = data[0].email;
+
+
 
 
 
@@ -36,9 +47,14 @@ function getAll() {
                         document.getElementById("email").value= data[0].email;
 
                     }
+
                 });
-            })
+
+            });
+
+
 }
+
 
 function updateUser(){
     let userId = sessionStorage.getItem("LoggedInId");
