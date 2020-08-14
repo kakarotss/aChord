@@ -23,6 +23,8 @@ public class coursesService {
 	public List <courses> getCourses(users user) {
 		List <courses> courses = new ArrayList<courses>();
 		
+		
+		
 		if(user.getUserId() ==0) {
 			
 			courses  = courseRepo.findAll();
