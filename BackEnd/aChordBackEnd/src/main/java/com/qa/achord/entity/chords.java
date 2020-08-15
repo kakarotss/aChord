@@ -13,8 +13,7 @@ public class chords {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int chordId;
 
-	@OneToOne
-	private courses course;
+	private int courseId;
 	
 	private String chordTitle;
 	private String chordDescription;

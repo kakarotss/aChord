@@ -12,13 +12,11 @@ public class courseLine {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int courseLineId;
 	
-	@OneToOne
-	private courses course;
-
-	private String courseStatus;
+	private int courseId;
 	
-	@OneToOne
-	private users user;
+	private int userId;
+
+	private String courseStatus = "undone";
 	
 	
 	public int getCourseLineId() {
@@ -34,6 +32,19 @@ public class courseLine {
 	public void setCourseStatus(String courseStatus) {
 		this.courseStatus = courseStatus;
 	}
+	public int getCourseId() {
+		return courseId;
+	}
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	
 	
 	
 	
