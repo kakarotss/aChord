@@ -20,21 +20,20 @@ import com.qa.achord.service.coursesService;
 @CrossOrigin   //need this line just need it dont ask
 @RestController
 @RequestMapping("/aChord")
-public class coursesController {
+public class chordsController {
 	
 	@Autowired
 	coursesService courseService;
 	
 	
-	@GetMapping("/allCourses")
-	public List <courses> registration(@RequestBody users user) {
-		return courseService.getCourses(user);
+	@GetMapping("/allChords")
+	public List <courses> registration(@RequestBody courses course) {
+		return chordsService.getChords(course);
 		
 	}
 	
 	
 	///////////////////////Admin tools Controller methods/////////////////
 	
-
 
 }
