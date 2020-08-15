@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.qa.achord.entity.chords;
 import com.qa.achord.entity.courses;
 import com.qa.achord.entity.users;
 import com.qa.achord.service.usersService;
 import com.qa.achord.service.adminUserService;
-import com.qa.achord.service.coursesService;
+import com.qa.achord.service.chordsService;
 
 @CrossOrigin   //need this line just need it dont ask
 @RestController
@@ -23,13 +24,18 @@ import com.qa.achord.service.coursesService;
 public class chordsController {
 	
 	@Autowired
-	coursesService courseService;
+	chordsService chordsService;
 	
 	
 	@GetMapping("/allChords")
-	public List <courses> registration(@RequestBody courses course) {
-		return chordsService.getChords(course);
+	public List <chords> allChords() {
+		return chordsService.getAllChords();
 		
+	}
+	
+	@GetMapping("/courseChords")
+	public List <chords> courseChords(@RequestBody courses course) {
+		return chordsService.getCourseChords(course.getCourseId());
 	}
 	
 	

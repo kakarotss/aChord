@@ -7,11 +7,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.qa.achord.entity.chords;
-import com.qa.achord.entity.courseLine;
-import com.qa.achord.entity.courses;
 
 @Repository
 public interface chordsRepo extends JpaRepository<chords, Integer> {
+	
+	
+	@Query(value= "select * from chords where course_course_id= ?1", nativeQuery=true)
+	public List<chords> CourseChords(int courseId);
+	
+	
 	
 
 }
