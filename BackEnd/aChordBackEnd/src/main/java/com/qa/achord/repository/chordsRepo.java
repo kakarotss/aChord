@@ -18,6 +18,9 @@ public interface chordsRepo extends JpaRepository<chords, Integer> {
 	@Query(value= "select * from chords where course_id= ?1", nativeQuery=true)
 	public List<chords> CourseChordsOffline(int courseId);
 	
+	@Query(value= "select * from chords where chord_title LIKE %?1% OR chord_description LIKE %?1%", nativeQuery=true)
+	public List<chords> search(String search);
+	
 	
 	
 	

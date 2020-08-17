@@ -36,6 +36,12 @@ public List <chords> getCourseChordsOffline(int Cid) {
 	
 	return chordRepo.CourseChordsOffline(Cid);
 }
+
+
+public List <chords> search(String search) {
+	
+	return chordRepo.search(search);
+}
 	
 	
 	

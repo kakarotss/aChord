@@ -44,6 +44,12 @@ public class chordsController {
 		return chordsService.getCourseChordsOffline(course.getCourseId());
 	}
 	
+	@GetMapping("/search")
+	public List <chords> search(@RequestParam(name = "search") String search) {
+		return chordsService.search(search);
+		
+	}
+	
 	
 	///////////////////////Admin tools Controller methods/////////////////
 	
