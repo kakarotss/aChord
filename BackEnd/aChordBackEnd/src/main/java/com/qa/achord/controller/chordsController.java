@@ -39,6 +39,11 @@ public class chordsController {
 		return chordsService.getCourseChords(course.getCourseId(), Uid);
 	}
 	
+	@PostMapping("/courseChordsOffline")
+	public List <chords> courseChordsOffline(@RequestBody courses course) {
+		return chordsService.getCourseChordsOffline(course.getCourseId());
+	}
+	
 	
 	///////////////////////Admin tools Controller methods/////////////////
 	

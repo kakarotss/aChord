@@ -15,6 +15,9 @@ public interface chordsRepo extends JpaRepository<chords, Integer> {
 	@Query(value= "select * from chords where course_id= ?1 AND course_id not in (select course_id from course_line where user_id = ?2); ", nativeQuery=true)
 	public List<chords> CourseChords(int courseId, int userId);
 	
+	@Query(value= "select * from chords where course_id= ?1", nativeQuery=true)
+	public List<chords> CourseChordsOffline(int courseId);
+	
 	
 	
 	

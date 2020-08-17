@@ -23,8 +23,19 @@ function getAll() {
     courseId = getParams(window.location.href).courseId;
     userId = sessionStorage.getItem("LoggedInId");
 
+    let url;
 
-    fetch(`http://localhost:9001/aChord/courseChords?Uid=${userId}`, {
+    if (userId == null){
+        url = `http://localhost:9001/aChord/courseChordsOffline`;
+
+    }
+    else{
+        url = `http://localhost:9001/aChord/courseChords?Uid=${userId}`;
+
+    }
+
+
+    fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -48,8 +59,10 @@ function getAll() {
                         document.getElementById("textArea").innerHTML += string;
                     }
                     else {
-                        document.getElementById("button").innerHTML += '<button onclick="courseLine(userId, courseId)" class="btn btn-block btn-danger">Add to Profile</button><hr>';
-                        document.getElementById("chords").innerHTML="";
+                        if(userId != null) {
+                            document.getElementById("button").innerHTML += '<button onclick="courseLine(userId, courseId)" class="btn btn-block btn-danger">Add to Profile</button><hr>';
+                            document.getElementById("chords").innerHTML = "";
+                        }
                         for (let i = 0; i < data.length; i++) {
 
                                 let string = '<div class="alert alert-dark"><center><H2>'+data[i].chordTitle+'</H2></center><img src="chordImg/'+data[i].chordImg+'" id="image"><hr><h5>'+data[i].chordDescription+'</h5></div><hr>';

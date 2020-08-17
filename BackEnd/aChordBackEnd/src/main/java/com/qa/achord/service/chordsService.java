@@ -31,6 +31,11 @@ public List <chords> getCourseChords(int Cid,int Uid) {
 		
 		return chordRepo.CourseChords(Cid, Uid);
 	}
+
+public List <chords> getCourseChordsOffline(int Cid) {
+	
+	return chordRepo.CourseChordsOffline(Cid);
+}
 	
 	
 	
