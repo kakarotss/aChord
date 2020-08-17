@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Chords</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <script src="https://kit.fontawesome.com/f687ca6f88.js" crossorigin="anonymous" ></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="flickity/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="flickity/flickity.css">
+    <script src="JS/updateNavBar.js"></script>
+    <script src="JS/allChords.js"></script>
+</head>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color: #3e4551 ;">
+        <a class="navbar-brand" href="Index.html"><img src="logo1.png" ></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="allCourses.html"><h5><i style="color: royalblue" class="fas fa-book fa-fw"></i>All Courses</h5></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link danger" href="allChords.html"><h5><i ></i><svg style="color: gold" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-music-note-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                        <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+                        <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+                        <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                    </svg>ALL Chords</h5></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Disscussions.html"><h5><i style="color: mediumseagreen" class="fas fa-comments fa-fw"></i> Discussions</h5></a>
+                </li>
+
+
+            </ul>
+
+
+
+
+
+
+
+
+            <form class="form-inline my-2 my-lg-0" style="margin-right: 1%" action="search.php">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0 fas fa-search" type="submit"></button>
+            </form>
+
+
+
+            <ul class="nav navbar-nav navbar-right " id="rightNav">
+                <li>
+                    <a class="nav-link" href="Login.html"><h5><i style="color: white" class="fas fa-user fa-fw"></i>Login/Register</h5><span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav style="background-image: linear-gradient(#3e4551, #2f353e);" class="navbar navbar-expand-lg navbar-secondary justify-content-center ">
+        <h2  class="text-light"><i style="color: white" class="fas fa-book fa-fw"></i> Course Info</h2>
+    </nav>
+
+
+</header>
+
+
+<body style="background-color: #7B8390">
+<br>
+<hr>
+
+<div class="container">
+    <div id="textArea"></div>
+    <div id="button"></div>
+    <div id="chords">
+<!--        <div class="alert alert-dark">-->
+<!--            <center><H2>C Major</H2></center>-->
+<!--            <img src="chordImg/1.1.png" id="image">-->
+<!--            <hr>-->
+<!--            <h5>sssssssssssafasfadgasdgasfgsafbhafhsgsdafadfgasdgsadgsagdsagasfgsafgsafhdfhskdgfakjdfaksjfaksj</h5>-->
+
+<!--        </div>-->
+    </div>
+
+
+</div>
+
+</body>
+
+
+<div class="footerPos"></div>
+<footer class="footer" style="background-color: #3e4551; ">
+
+
+    <!--    <hr style="background-color: #383e49" >-->
+
+
+    <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+            <h5 style="color: white"  class="mb-1">Register here</h5>
+        </li>
+        <li class="list-inline-item">
+            <a href="Register.html" class="btn btn-danger btn-rounded">Sign up!</a>
+        </li>
+    </ul>
+    <!-- Call to action -->
+
+    <hr style="background-color: #383e49" >
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+                <i style="color: #7f93be" class="fab fa-facebook-f"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+                <i style="color: #55acee" class="fab fa-twitter"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+                <i style="color: #dd4b39" class="fab fa-google-plus-g"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+                <i style="color: #0082ca" class="fab fa-linkedin-in"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+                <i style="color: #ec4a89"  class="fab fa-dribbble"> </i>
+            </a>
+        </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div style="color: gainsboro" class="footer-copyright text-center py-3">© 2020 aChord, Inc. All Rights Reserved
+        <a style="color: white" href="index.php"> aChord.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+
+</html>
