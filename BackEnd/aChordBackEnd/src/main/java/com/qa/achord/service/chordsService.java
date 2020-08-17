@@ -27,9 +27,9 @@ public class chordsService {
 		return chordRepo.findAll();
 	}
 	
-public List <chords> getCourseChords(int id) {
+public List <chords> getCourseChords(int Cid,int Uid) {
 		
-		return chordRepo.CourseChords(id);
+		return chordRepo.CourseChords(Cid, Uid);
 	}
 	
 	

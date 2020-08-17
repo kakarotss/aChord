@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.achord.entity.chords;
@@ -33,9 +34,9 @@ public class chordsController {
 		
 	}
 	
-	@GetMapping("/courseChords")
-	public List <chords> courseChords(@RequestBody courses course) {
-		return chordsService.getCourseChords(course.getCourseId());
+	@PostMapping("/courseChords")
+	public List <chords> courseChords(@RequestBody courses course, @RequestParam(name = "Uid") int Uid) {
+		return chordsService.getCourseChords(course.getCourseId(), Uid);
 	}
 	
 	
