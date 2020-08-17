@@ -5,8 +5,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 625px;
-    height: 400px;
+    width: 22rem;
+    height: 10rem;
 }
 
 p
@@ -157,8 +157,8 @@ nav > div a.nav-item.nav-link:focus
 
 
 #cardheight{
-    min-height: 13vw;
-    max-height: 13vw;
+    min-height: 5vw;
+    max-height: 5vw;
 }
 
 .hr1{

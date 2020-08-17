@@ -6,7 +6,7 @@ function register() {
     let lastName = document.getElementById("lastName").value;
     let email = document.getElementById("email").value;
 
-    fetch(`http://localhost:9000/aChord/Register`, {
+    fetch(`http://localhost:9001/aChord/Register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

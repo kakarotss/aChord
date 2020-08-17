@@ -6,7 +6,7 @@ $(function() {
 
 function getAll() {
     document.getElementById("tbody").innerHTML="";
-    fetch('http://localhost:9000/aChord/allUsers', {
+    fetch('http://localhost:9001/aChord/allUsers', {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -32,7 +32,7 @@ function getAll() {
 
 function deleteRecord(id) {
     // document.getElementById("tbody").innerHTML="";
-    fetch(`http://localhost:9000/aChord/deleteAccount`, {
+    fetch(`http://localhost:9001/aChord/deleteAccount`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -62,7 +62,7 @@ function updateRecord(id) {
     let lastName = document.getElementById("lname"+id+"").value;
     let email = document.getElementById("email"+id+"").value;
 
-    fetch(`http://localhost:9000/aChord/addUsers`, {
+    fetch(`http://localhost:9001/aChord/addUsers`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -96,7 +96,7 @@ function insertRecord() {
     let lastName = document.getElementById("lastName").value;
     let email = document.getElementById("email").value;
 
-    fetch(`http://localhost:9000/aChord/addUsers`, {
+    fetch(`http://localhost:9001/aChord/addUsers`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
