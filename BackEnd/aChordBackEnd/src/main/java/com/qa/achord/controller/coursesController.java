@@ -26,8 +26,8 @@ public class coursesController {
 	coursesService courseService;
 	
 	
-	@GetMapping("/allCourses")
-	public List <courses> registration(@RequestBody users user) {
+	@PostMapping("/allCourses")
+	public List <courses> allCourses(@RequestBody users user) {
 		return courseService.getCourses(user);
 		
 	}

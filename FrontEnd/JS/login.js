@@ -27,6 +27,7 @@ function login() {
                         for (let i = 0; i < data.length; i++) {
                             sessionStorage.setItem("LoggedInUsername", data[i].username);
                             sessionStorage.setItem("LoggedInId", data[i].userId);
+                            sessionStorage.setItem("LoggedLevel", data[i].userLevel);
                             window.location.href = "Index.html";
                             console.log("passed");
 
