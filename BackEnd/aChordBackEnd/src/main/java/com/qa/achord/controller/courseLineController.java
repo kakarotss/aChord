@@ -30,7 +30,7 @@ public class courseLineController {
 	
 	
 	
-	@GetMapping("/myCourseLine")
+	@PostMapping("/myCourseLine")
 	public List <courseLine> getMyLine(@RequestBody users user) {
 		return courseLineService.myCourseLine(user);
 	}

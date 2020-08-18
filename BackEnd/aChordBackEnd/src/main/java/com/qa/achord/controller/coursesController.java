@@ -1,6 +1,8 @@
 package com.qa.achord.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,6 +33,13 @@ public class coursesController {
 		return courseService.getCourses(user);
 	}
 	
+	
+	@PostMapping("/idCourses")
+	public Optional<courses> idCourse(@RequestBody courses course) {
+		Optional<courses> myCourse = Optional.empty();
+		myCourse = courseService.idCourses(course);
+		return myCourse;
+	}
 	
 	///////////////////////Admin tools Controller methods/////////////////
 	

@@ -21,18 +21,15 @@ var getParams = function (url) {
 
 function getAll() {
     courseId = getParams(window.location.href).courseId;
+    courseLineId = getParams(window.location.href).courseLineId;
+    courseStatus = getParams(window.location.href).status;
     userId = sessionStorage.getItem("LoggedInId");
 
     let url;
 
-    if (userId == null){
         url = `http://localhost:9001/aChord/courseChordsOffline`;
 
-    }
-    else{
-        url = `http://localhost:9001/aChord/courseChords?Uid=${userId}`;
 
-    }
 
 
     fetch(url, {
@@ -54,14 +51,17 @@ function getAll() {
                 response.json().then(function(data) {
 
 
-                    if(data.length<=0){
-                        let string = '<div class="alert alert-warning" <h2><b>Course Unavailable: you may have added this course to your profile <a href="myProfile.html">click here</a><b></b></h2><div></div>';
-                        document.getElementById("textArea").innerHTML += string;
-                    }
-                    else {
-                        if(userId != null) {
-                            document.getElementById("button").innerHTML += '<button onclick="courseLine(userId, courseId)" class="btn btn-block btn-danger">Add to Profile</button><hr>';
+
+                        if(userId != null && courseStatus != "Done") {
+                            document.getElementById("button").innerHTML += '<button onclick="courseFinish(courseLineId, userId, courseId)" class="btn btn-block btn-success">Finish</button><hr>';
                             document.getElementById("chords").innerHTML = "";
+                        }
+                        else {
+                            document.getElementById("button").innerHTML = '';
+
+                            document.getElementById("button").innerHTML += '<a disabled class=" disabled btn btn-block btn-success">Congratulations! You have completed this course</a><hr>';
+
+
                         }
                         for (let i = 0; i < data.length; i++) {
 
@@ -69,13 +69,14 @@ function getAll() {
                                 document.getElementById("chords").innerHTML += string;
 
                         }
-                    }
+                    
                 });
             })
 }
 
 
-function courseLine(userId, courseId) {
+
+function courseFinish(courseLineId, userId, courseId) {
 
     fetch(`http://localhost:9001/aChord/addLine`, {
         method: "POST",
@@ -84,7 +85,9 @@ function courseLine(userId, courseId) {
         },
         body: JSON.stringify({
             userId: userId,
-            courseId: courseId
+            courseId: courseId,
+            courseLineId: courseLineId,
+            courseStatus: "Done"
 
         })
     })
@@ -98,7 +101,7 @@ function courseLine(userId, courseId) {
                 else {
                     document.getElementById("button").innerHTML = '';
 
-                    document.getElementById("button").innerHTML += '<a disabled class=" disabled btn btn-block btn-success">Added Successfully, you can view your courses in your profile</a><hr>';
+                    document.getElementById("button").innerHTML += '<a disabled class=" disabled btn btn-block btn-success">Congratulations! You have completed this course</a><hr>';
 
                     // setTimeout(function(){ window.location.href = "allCourses.html"; }, 1500);
                     // getAll();

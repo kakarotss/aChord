@@ -2,6 +2,7 @@ package com.qa.achord.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,9 @@ public class courseLineService {
 	
 	public List <courseLine> myCourseLine(users user) {
 		
-		return courseLineRepo.myLine(user.getUserId());
+		List<courseLine> myCourse = new ArrayList<courseLine>();
+		myCourse = courseLineRepo.myLine(user.getUserId());
+		return myCourse;
 	}
 	
 	

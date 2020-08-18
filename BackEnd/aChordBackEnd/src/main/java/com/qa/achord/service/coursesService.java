@@ -2,6 +2,7 @@ package com.qa.achord.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,12 @@ public class coursesService {
 		}
 		//need check if it actually has been inserted probably using optional
 		return courses;
+	}
+	
+	
+	public Optional<courses> idCourses(courses course) {
+		
+		return courseRepo.findById(course.getCourseId());
 	}
 	
 	

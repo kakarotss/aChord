@@ -16,12 +16,12 @@ import com.qa.achord.entity.courses;
 public interface courseLineRepo extends JpaRepository<courseLine, Integer> {
 		
 	
-	@Query(value= "select * from course_line where user_user_id= ?1", nativeQuery=true)
+	@Query(value= "select * from course_line where user_id= ?1", nativeQuery=true)
 	public List<courseLine> myLine(int userId);
 	
 
 	//not working
-//	@Query(value= "insert into course_line(course_status, course_course_id, user_user_id) values ('undone', ?1, ?2 )", nativeQuery=true)
+//	@Query(value= "insert into course_line(course_status, course_id, user_id) values ('undone', ?1, ?2 )", nativeQuery=true)
 //	public List<courseLine> addLine(int courseId, int userId);
 //	
 	

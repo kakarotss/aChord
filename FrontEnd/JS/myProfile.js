@@ -1,13 +1,12 @@
 $(function() {
-    console.log(getAll());
+    getAll();
+    getMyLine();
 });
 
 
 
 function getAll() {
 
-let result ="";
-    // document.getElementById("tbody").innerHTML="";
     fetch('http://localhost:9001/aChord/myProfile', {
         method: "POST",
         headers: {
@@ -28,14 +27,6 @@ let result ="";
                 response.json().then(function(data) {
                     // console.log("asda" +sessionStorage.getItem("loggedInUsername"));
                     console.log(data);
-                    let emaill = data[0].email;
-                    console.log(data[0].email);
-                    console.log(emaill);
-
-                    result = data[0].email;
-
-
-
 
 
                     if(data.length !=0){
@@ -52,6 +43,33 @@ let result ="";
 
             });
 
+}
+
+
+function removeLine(id) {
+
+    fetch('http://localhost:9001/aChord/removeLine', {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            "courseLineId": id
+        })
+    })
+        .then(
+            function(response) {
+                if (response.status !== 200) {
+                    console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
+                    return;
+                }else{
+                    getMyLine();
+                }
+
+
+            });
 
 }
 
@@ -103,15 +121,82 @@ function updateUser(){
                     }
                     else{
                         console.log("failed");
+                        alert("Update Failed Please Try Again :(")
                     }
                 });
 
 
-                // else{
-                //     sessionStorage.setItem("LoggedInUser", username);
-                //
-                // }
-
-
             })
+}
+
+
+
+function getMyLine() {
+
+    fetch('http://localhost:9001/aChord/myCourseLine', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            "userId": sessionStorage.getItem("LoggedInId"),
+        })
+    })
+        .then(
+            function(response) {
+                if (response.status !== 200) {
+                    console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
+                    return;
+                }
+                response.json().then(function(data) {
+
+                    document.getElementById("nav-profile").innerHTML = "";
+
+                    for(let i=  0; i < data.length; i++){
+
+
+                        fetch('http://localhost:9001/aChord/idCourses', {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                "courseId": data[i].courseId
+                            })
+                        })
+                            .then(
+                                function(response) {
+                                    if (response.status !== 200) {
+                                        console.log('Looks like there was a problem. Status Code: ' +
+                                            response.status);
+                                        return;
+                                    }
+                                    response.json().then(function(data1) {
+                                        console.log(data1);
+
+                                        let element = '<div class="alert alert-info alert-dismissible fade show" role="alert"><strong><a href="viewMyCourse.html?courseId='+data[i].courseId+'&courseLineId='+data[i].courseLineId+'&status='+data[i].courseStatus+'" class="text-info">Name: '+data1.courseName+'  </a></strong><button onclick="removeLine('+data[i].courseLineId+')" class="btn btn-sm btn-danger text-light float-lg-right pt">Remove</button><hr><strong> Status: '+data[i].courseStatus+'</strong></div><hr>'
+
+
+                                        document.getElementById("nav-profile").innerHTML += element;
+
+
+
+                                    });
+
+                                });
+
+
+
+                    }
+
+                    console.log(data);
+
+                });
+
+            });
+
+
 }
