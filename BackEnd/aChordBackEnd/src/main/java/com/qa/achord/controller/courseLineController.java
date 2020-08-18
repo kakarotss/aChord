@@ -42,6 +42,12 @@ public class courseLineController {
 		return courseLineService.insert(line);
 	}
 	
+	@DeleteMapping("/removeLine")
+	public List <courseLine> removeMyLine(@RequestBody courseLine line) {
+		
+		return courseLineService.remove(line);
+	}
+	
 	
 	///////////////////////Admin tools Controller methods/////////////////
 	

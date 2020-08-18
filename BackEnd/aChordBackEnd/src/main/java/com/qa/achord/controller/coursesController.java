@@ -29,7 +29,6 @@ public class coursesController {
 	@PostMapping("/allCourses")
 	public List <courses> allCourses(@RequestBody users user) {
 		return courseService.getCourses(user);
-		
 	}
 	
 	

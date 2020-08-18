@@ -33,6 +33,12 @@ public List <courseLine> insert(courseLine line) {
 	
 		return null;
 	}
+
+public List <courseLine> remove(courseLine line) {
+	courseLineRepo.deleteById(line.getCourseLineId());
+
+	return null;
+}
 	
 	
 	
