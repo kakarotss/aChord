@@ -19,6 +19,18 @@ public class courseLine {
 	private String courseStatus = "undone";
 	
 	
+	public courseLine() {
+		
+	}
+	
+	
+	public courseLine(int courseLineId, int courseId, int userId, String courseStatus) {
+		super();
+		this.courseLineId = courseLineId;
+		this.courseId = courseId;
+		this.userId = userId;
+		this.courseStatus = courseStatus;
+	}
 	public int getCourseLineId() {
 		return courseLineId;
 	}

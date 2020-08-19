@@ -16,6 +16,19 @@ public class courses {
 	
 	
 	
+	public courses() {
+		
+	}
+	
+	public courses(int courseId, String courseName, int courseLevel, String courseImg) {
+		super();
+		this.courseId = courseId;
+		this.courseName = courseName;
+		this.courseLevel = courseLevel;
+		this.courseImg = courseImg;
+	}
+	
+	
 	public int getCourseId() {
 		return courseId;
 	}

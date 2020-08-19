@@ -37,10 +37,15 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.achord.entity.chords;
+import com.qa.achord.entity.courseLine;
 import com.qa.achord.entity.users;
 import com.qa.achord.repository.chordsRepo;
+import com.qa.achord.repository.courseLineRepo;
+import com.qa.achord.repository.coursesRepo;
 import com.qa.achord.repository.usersRepo;
 import com.qa.achord.service.chordsService;
+import com.qa.achord.service.courseLineService;
+import com.qa.achord.service.coursesService;
 //import com.qa.achord.service.usersServiceTest;
 
 
@@ -48,79 +53,55 @@ import com.qa.achord.service.chordsService;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class chordsControllerTest {
+public class coursesLineTest {
 	
 	  @Autowired
 	    private MockMvc mock;
 	  
 	  @MockBean
-	    private chordsRepo repo;
+	    private courseLineRepo repo;
 	  
 	  @MockBean
-	    private chordsService chordService;
+	    private courseLineService chordService;
 	  
 	  @InjectMocks
 	    private ObjectMapper mapper = new ObjectMapper();
 	  
-	  private chords chord;
+	  private courseLine courseLine;
 	
-	  private  chords insertedChord = new chords();
+	  private  courseLine insertedCourse = new courseLine();
 	  
 	   @Before
 	    public void init() {
 	        this.repo.deleteAll();
 	        
-	        insertedChord.setChordDescription("d");
-	        insertedChord.setChordId(1);
-	        insertedChord.setChordImg("a");
-	        insertedChord.setChordTitle("s");
-
+	       insertedCourse.setCourseId(1);
+	       insertedCourse.setCourseLineId(1);
+	       insertedCourse.setCourseStatus("undone");
+	       insertedCourse.setUserId(1);
+//	       int courseLineId, int courseId, int userId, String courseStatus
 	        
-	        this.chord = new chords(1,1,"asd","asd","asd");	        
+	        this.courseLine = new courseLine(1,1,1,"undone");	        
 	    }
 	  
 	   
-	   @Test
-	    public void testAllUsers() throws Exception {
-	        
-	        this.mock.perform(get("/aChord/allChords"))
-	        .andExpect(status().isOk());
-	            
-	    }
+	 
 
 	   
 	   
 	   
 	   @Test
-	    public void testcoruseChord() throws Exception {
+	    public void myCourseLine() throws Exception {
 	        
-	        Mockito.when(this.repo.save(this.chord)).thenReturn(this.chord);
-	        Assertions.assertThat(this.repo.save(this.chord)).isEqualTo(this.chord);
+	        Mockito.when(this.repo.save(this.courseLine)).thenReturn(this.courseLine);
+	        Assertions.assertThat(this.repo.save(this.courseLine)).isEqualTo(this.courseLine);
 	        
-	        MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.POST, "/aChord/courseChords?Uid=1");
+	        MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.POST, "/aChord/myCourseLine");
 	        
-	        mockrequest.contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(chord))
+	        mockrequest.contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(courseLine))
 	        .accept(MediaType.APPLICATION_JSON);
 	        
-	        Mockito.verify(this.repo, Mockito.times(1)).save(this.chord);
-	        
-	        this.mock.perform(mockrequest)
-	        
-	        .andExpect(status().isOk());
-	    }
-	   
-	   @Test
-	    public void testofflineChord() throws Exception {
-	        
-	        Mockito.when(this.repo.save(this.chord)).thenReturn(this.chord);
-	        Assertions.assertThat(this.repo.save(this.chord)).isEqualTo(this.chord);
-	        
-	        MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.POST, "/aChord/courseChordsOffline");
-	        
-	        mockrequest.contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(chord))
-	        .accept(MediaType.APPLICATION_JSON);
-	        
-	        Mockito.verify(this.repo, Mockito.times(1)).save(this.chord);
+	        Mockito.verify(this.repo, Mockito.times(1)).save(this.courseLine);
 	        
 	        this.mock.perform(mockrequest)
 	        
@@ -129,25 +110,39 @@ public class chordsControllerTest {
 	   
 	   
 	   @Test
-	    public void testsearch() throws Exception {
+	    public void addLine() throws Exception {
 	        
-	        Mockito.when(this.repo.save(this.chord)).thenReturn(this.chord);
-	        Assertions.assertThat(this.repo.save(this.chord)).isEqualTo(this.chord);
+	        Mockito.when(this.repo.save(this.courseLine)).thenReturn(this.courseLine);
+	        Assertions.assertThat(this.repo.save(this.courseLine)).isEqualTo(this.courseLine);
 	        
-	        MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.GET, "/aChord/search?search=asd");
+	        MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.POST, "/aChord/addLine");
 	        
-	        mockrequest.contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(chord))
+	        mockrequest.contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(courseLine))
 	        .accept(MediaType.APPLICATION_JSON);
 	        
-	        Mockito.verify(this.repo, Mockito.times(1)).save(this.chord);
+	        Mockito.verify(this.repo, Mockito.times(1)).save(this.courseLine);
 	        
 	        this.mock.perform(mockrequest)
 	        
 	        .andExpect(status().isOk());
 	    }
 	   
-
+	   @Test
+	    public void removeLine() throws Exception {
+	        
+	        Mockito.when(this.repo.save(this.courseLine)).thenReturn(this.courseLine);
+	        Assertions.assertThat(this.repo.save(this.courseLine)).isEqualTo(this.courseLine);
+	        
+	        MockHttpServletRequestBuilder mockrequest = MockMvcRequestBuilders.request(HttpMethod.DELETE, "/aChord/removeLine");
+	        
+	        mockrequest.contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(courseLine))
+	        .accept(MediaType.APPLICATION_JSON);
+	        
+	        Mockito.verify(this.repo, Mockito.times(1)).save(this.courseLine);
+	        
+	        this.mock.perform(mockrequest)
+	        
+	        .andExpect(status().isOk());
+	    }
 	   
-
-
 }
