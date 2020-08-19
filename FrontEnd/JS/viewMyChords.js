@@ -69,7 +69,7 @@ function getAll() {
                                 document.getElementById("chords").innerHTML += string;
 
                         }
-                    
+
                 });
             })
 }
@@ -99,6 +99,7 @@ function courseFinish(courseLineId, userId, courseId) {
                     return;
                 }
                 else {
+                    updateLevel();
                     document.getElementById("button").innerHTML = '';
 
                     document.getElementById("button").innerHTML += '<a disabled class=" disabled btn btn-block btn-success">Congratulations! You have completed this course</a><hr>';
@@ -113,4 +114,97 @@ function courseFinish(courseLineId, userId, courseId) {
 
             })
 }
+
+
+function updateLevel() {
+
+    fetch('http://localhost:9001/aChord/myProfile', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            "username": sessionStorage.getItem("LoggedInUsername"),
+        })
+    })
+        .then(
+            function(response) {
+                if (response.status !== 200) {
+                    console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
+                    return;
+                }
+                response.json().then(function(data) {
+                    // console.log("asda" +sessionStorage.getItem("loggedInUsername"));
+                    console.log(data);
+
+
+                    if(data.length !=0){
+
+                        userLevel = parseInt(getParams(window.location.href).userLevel);
+                        userLevel +=1;
+
+                        fetch(`http://localhost:9001/aChord/Register`, {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                "userId": sessionStorage.getItem("LoggedInId"),
+                                "username": data[0].username,
+                                "firstName": data[0].firstName,
+                                "lastName": data[0].lastName,
+                                "password": data[0].password,
+                                "userLevel": userLevel
+                            })
+                        })
+                            .then(
+                                function(response) {
+                                    if (response.status !== 200) {
+                                        console.log('Update failed please try again. Status Code: ' +
+                                            response.status);
+                                        return;
+                                    }
+                                    response.json().then(function(data) {
+                                        console.log(data);
+
+                                        if(data.length !=0) {
+                                            for (let i = 0; i < data.length; i++) {
+                                                sessionStorage.setItem("LoggedInUsername", data[i].username);
+                                                sessionStorage.setItem("LoggedInId", data[i].userId);
+                                                sessionStorage.setItem("LoggedLevel", userLevel);
+
+                                                // document.getElementById("alertArea").innerHTML = "";
+                                                // document.getElementById("alertArea").innerHTML += '<div class="alert alert-primary" role="alert"><center><b>Profile Updated</b></center></div>';
+                                                // getAll();
+                                                // window.location.href = "myProfile.html";
+
+
+                                            }
+                                        }
+                                        else{
+                                            console.log("failed");
+                                            alert("Update Failed Please Try Again :(")
+                                        }
+                                    });
+
+
+                                })
+
+
+
+                    }
+
+                });
+
+            });
+
+}
+
+
+
+
+
+
 

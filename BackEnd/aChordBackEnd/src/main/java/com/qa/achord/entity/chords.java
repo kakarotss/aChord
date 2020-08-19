@@ -20,6 +20,23 @@ public class chords {
 	private String chordImg;
 	
 	
+	public chords() {
+		
+	}
+	
+	
+	
+	public chords(int chordId, int courseId, String chordTitle, String chordDescription, String chordImg) {
+		super();
+		this.chordId = chordId;
+		this.courseId = courseId;
+		this.chordTitle = chordTitle;
+		this.chordDescription = chordDescription;
+		this.chordImg = chordImg;
+	}
+
+
+
 	public int getChordId() {
 		return chordId;
 	}

@@ -20,6 +20,23 @@ public class users {
 	private String firstName;
 	private String lastName;
 	private int userLevel;
+	
+	public users() {
+		
+	}
+	
+	public users(int userId, String username, String userPassword, String email, String firstName, String lastName,
+			int userLevel) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.userPassword = userPassword;
+		this.email = email;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userLevel = userLevel;
+	}
+	
 	public int getUserId() {
 		return userId;
 	}

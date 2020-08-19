@@ -55,6 +55,9 @@ public List <users> myProfile(users user) {
 		return userRepo.userProfile(user.getUsername());
 	}
 
+
+
+
 public String deleteAccount(int id) {
 	
 	 userRepo.deleteById(id);

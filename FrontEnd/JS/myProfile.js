@@ -36,6 +36,9 @@ function getAll() {
                         document.getElementById("firstName").value= data[0].firstName;
                         document.getElementById("lastName").value= data[0].lastName;
                         document.getElementById("email").value= data[0].email;
+                        document.getElementById("level").innerHTML= '<div class="alert alert-dark">\n' +
+                            '                                                    <h4>Your Current Level is: <b id="userLevel">'+data[0].userLevel+'</b></h4>\n' +
+                            '                                                </div>';
 
                     }
 
@@ -175,11 +178,17 @@ function getMyLine() {
                                         return;
                                     }
                                     response.json().then(function(data1) {
-                                        console.log(data1);
+                                        // console.log(data1);
 
-                                        let element = '<div class="alert alert-info alert-dismissible fade show" role="alert"><strong><a href="viewMyCourse.html?courseId='+data[i].courseId+'&courseLineId='+data[i].courseLineId+'&status='+data[i].courseStatus+'" class="text-info">Name: '+data1.courseName+'  </a></strong><button onclick="removeLine('+data[i].courseLineId+')" class="btn btn-sm btn-danger text-light float-lg-right pt">Remove</button><hr><strong> Status: '+data[i].courseStatus+'</strong></div><hr>'
+                                        let element;
+                                        if(data[i].courseStatus == "Done"){
+                                            element = '<div class="alert alert-info alert-dismissible fade show" role="alert"><strong><a href="viewMyCourse.html?courseId=' + data[i].courseId + '&courseLineId=' + data[i].courseLineId + '&status=' + data[i].courseStatus + '&userLevel=' + document.getElementById("userLevel").innerText + '" class="text-info">Name: ' + data1.courseName + '  </a></strong><button onclick="removeLine(' + data[i].courseLineId + ')" class="btn btn-sm btn-danger text-light float-lg-right pt">Remove</button><hr><strong class="text-success"> Status: ' + data[i].courseStatus + '</strong></div><hr>'
 
 
+                                        }else {
+                                            element = '<div class="alert alert-info alert-dismissible fade show" role="alert"><strong><a href="viewMyCourse.html?courseId=' + data[i].courseId + '&courseLineId=' + data[i].courseLineId + '&status=' + data[i].courseStatus + '&userLevel=' + document.getElementById("userLevel").innerText + '" class="text-info">Name: ' + data1.courseName + '  </a></strong><button onclick="removeLine(' + data[i].courseLineId + ')" class="btn btn-sm btn-danger text-light float-lg-right pt">Remove</button><hr><strong class="text-danger"> Status: ' + data[i].courseStatus + '</strong></div><hr>'
+
+                                        }
                                         document.getElementById("nav-profile").innerHTML += element;
 
 
