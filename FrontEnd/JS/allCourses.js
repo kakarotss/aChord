@@ -14,7 +14,7 @@ function getAll() {
     }
 
     document.getElementById("courseArea").innerHTML="";
-    fetch('http://localhost:9001/aChord/allCourses', {
+    fetch('http://localhost:9003/aChord/allCourses', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

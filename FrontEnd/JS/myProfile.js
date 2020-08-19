@@ -7,7 +7,7 @@ $(function() {
 
 function getAll() {
 
-    fetch('http://localhost:9001/aChord/myProfile', {
+    fetch('http://localhost:9003/aChord/myProfile', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -51,7 +51,7 @@ function getAll() {
 
 function removeLine(id) {
 
-    fetch('http://localhost:9001/aChord/removeLine', {
+    fetch('http://localhost:9003/aChord/removeLine', {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -85,7 +85,7 @@ function updateUser(){
     let lastName = document.getElementById("lastName").value;
     let email = document.getElementById("email").value;
 
-    fetch(`http://localhost:9001/aChord/Register`, {
+    fetch(`http://localhost:9003/aChord/Register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -136,7 +136,7 @@ function updateUser(){
 
 function getMyLine() {
 
-    fetch('http://localhost:9001/aChord/myCourseLine', {
+    fetch('http://localhost:9003/aChord/myCourseLine', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -160,7 +160,7 @@ function getMyLine() {
                     for(let i=  0; i < data.length; i++){
 
 
-                        fetch('http://localhost:9001/aChord/idCourses', {
+                        fetch('http://localhost:9003/aChord/idCourses', {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"

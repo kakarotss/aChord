@@ -22,7 +22,7 @@ var getParams = function (url) {
 function getAll() {
     search = getParams(window.location.href).search;
 
-    fetch(`http://localhost:9001/aChord/search?search=${search}`, {
+    fetch(`http://localhost:9003/aChord/search?search=${search}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"

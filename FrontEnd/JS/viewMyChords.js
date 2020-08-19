@@ -27,7 +27,7 @@ function getAll() {
 
     let url;
 
-        url = `http://localhost:9001/aChord/courseChordsOffline`;
+        url = `http://localhost:9003/aChord/courseChordsOffline`;
 
 
 
@@ -78,7 +78,7 @@ function getAll() {
 
 function courseFinish(courseLineId, userId, courseId) {
 
-    fetch(`http://localhost:9001/aChord/addLine`, {
+    fetch(`http://localhost:9003/aChord/addLine`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -118,7 +118,7 @@ function courseFinish(courseLineId, userId, courseId) {
 
 function updateLevel() {
 
-    fetch('http://localhost:9001/aChord/myProfile', {
+    fetch('http://localhost:9003/aChord/myProfile', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -145,7 +145,7 @@ function updateLevel() {
                         userLevel = parseInt(getParams(window.location.href).userLevel);
                         userLevel +=1;
 
-                        fetch(`http://localhost:9001/aChord/Register`, {
+                        fetch(`http://localhost:9003/aChord/Register`, {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"

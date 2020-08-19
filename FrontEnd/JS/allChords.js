@@ -22,7 +22,7 @@ var getParams = function (url) {
 function getAll() {
 
 
-    fetch(`http://localhost:9001/aChord/allChords`, {
+    fetch(`http://localhost:9003/aChord/allChords`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"

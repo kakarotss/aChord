@@ -26,11 +26,11 @@ function getAll() {
     let url;
 
     if (userId == null){
-        url = `http://localhost:9001/aChord/courseChordsOffline`;
+        url = `http://localhost:9003/aChord/courseChordsOffline`;
 
     }
     else{
-        url = `http://localhost:9001/aChord/courseChords?Uid=${userId}`;
+        url = `http://localhost:9003/aChord/courseChords?Uid=${userId}`;
 
     }
 
@@ -77,7 +77,7 @@ function getAll() {
 
 function courseLine(userId, courseId) {
 
-    fetch(`http://localhost:9001/aChord/addLine`, {
+    fetch(`http://localhost:9003/aChord/addLine`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

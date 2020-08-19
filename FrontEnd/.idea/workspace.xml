@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54ed7fb7-8c49-42df-895a-cc29223033e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/controller/usersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/controller/usersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/entity/users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/entity/users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/repository/usersRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/repository/usersRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/service/usersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/service/usersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/test/java/com/example/achord/AChordBackEndApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/test/java/com/qa/achord/AChordBackEndApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/adminUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/adminUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/allChords.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/allChords.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/allCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/allCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS/myProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/myProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/viewChords.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/viewChords.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS/viewMyChords.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/viewMyChords.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courseImg/course3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/myProfile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +91,7 @@
       <workItem from="1597750183467" duration="6364000" />
       <workItem from="1597790141846" duration="3397000" />
       <workItem from="1597842797068" duration="813000" />
+      <workItem from="1597874422685" duration="421000" />
     </task>
     <servers />
   </component>
