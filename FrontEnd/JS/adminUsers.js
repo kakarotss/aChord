@@ -22,9 +22,14 @@ function getAll() {
                 response.json().then(function(data) {
                     console.log(data);
                     for (let i = 0; i < data.length; i++) {
-                        let string = '<tr><td>'+data[i].userId+'</td><td><input class="bg-dark text-light" id="fname'+data[i].userId+'" value="'+data[i].firstName+'"></td><td><input class="bg-dark text-light" id="lname'+data[i].userId+'" value="'+data[i].lastName+'"></td><td><input class="bg-dark text-light" id="uname'+data[i].userId+'" value="'+data[i].username+'"></td><td><input class="bg-dark text-light" id="password'+data[i].userId+'" value="'+data[i].userPassword+'"></td><td><input class="bg-dark text-light" id="email'+data[i].userId+'" value="'+data[i].email+'"></td><td><button class ="btn btn-danger btn-block" onclick= "deleteRecord(' +data[i].userId+ ')">X</button></td><td><button onClick="updateRecord('+data[i].userId+')" class =" btn btn-warning btn-block">Update</button></td></tr>';
-                        document.getElementById("tbody").innerHTML+=string;
+                        if(data[i].username == "testUsername"){
+                            let string = '<tr><td>' + data[i].userId + '</td><td><input class="bg-dark text-light" id="fname' + data[i].userId + '" value="' + data[i].firstName + '"></td><td><input class="bg-dark text-light" id="lname' + data[i].userId + '" value="' + data[i].lastName + '"></td><td><input class="bg-dark text-light" id="uname' + data[i].userId + '" value="' + data[i].username + '"></td><td><input class="bg-dark text-light" id="password' + data[i].userId + '" value="' + data[i].userPassword + '"></td><td><input class="bg-dark text-light" id="email' + data[i].userId + '" value="' + data[i].email + '"></td><td><button id="deleteThis" class ="btn btn-danger btn-block" onclick= "deleteRecord(' + data[i].userId + ')">X</button></td><td><button onClick="updateRecord(' + data[i].userId + ')" class =" btn btn-warning btn-block">Update</button></td></tr>';
+                            document.getElementById("tbody").innerHTML += string;
 
+                        }else {
+                            let string = '<tr><td>' + data[i].userId + '</td><td><input class="bg-dark text-light" id="fname' + data[i].userId + '" value="' + data[i].firstName + '"></td><td><input class="bg-dark text-light" id="lname' + data[i].userId + '" value="' + data[i].lastName + '"></td><td><input class="bg-dark text-light" id="uname' + data[i].userId + '" value="' + data[i].username + '"></td><td><input class="bg-dark text-light" id="password' + data[i].userId + '" value="' + data[i].userPassword + '"></td><td><input class="bg-dark text-light" id="email' + data[i].userId + '" value="' + data[i].email + '"></td><td><button class ="btn btn-danger btn-block" onclick= "deleteRecord(' + data[i].userId + ')">X</button></td><td><button onClick="updateRecord(' + data[i].userId + ')" class =" btn btn-warning btn-block">Update</button></td></tr>';
+                            document.getElementById("tbody").innerHTML += string;
+                        }
                     }
                 });
             })
