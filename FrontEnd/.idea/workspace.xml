@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54ed7fb7-8c49-42df-895a-cc29223033e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/adminUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/adminUsers.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1fUnR9zO1dOGwnRRBwHQDqKvxsi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\QA\aChord\FrontEnd\JS" />
+      <recent name="D:\QA\aChord\FrontEnd" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="myProfile.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/JS/myProfile.js" working-dir="$PROJECT_DIR$/JS">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.myProfile.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54ed7fb7-8c49-42df-895a-cc29223033e5" name="Default Changelist" comment="" />
+      <created>1596281527962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596281527962</updated>
+      <workItem from="1596281530700" duration="60000" />
+      <workItem from="1596387300202" duration="632000" />
+      <workItem from="1596387951141" duration="5050000" />
+      <workItem from="1596462898041" duration="4296000" />
+      <workItem from="1596723869021" duration="93000" />
+      <workItem from="1596805186476" duration="4957000" />
+      <workItem from="1596997727481" duration="12545000" />
+      <workItem from="1597083878519" duration="2496000" />
+      <workItem from="1597171445893" duration="2034000" />
+      <workItem from="1597232769790" duration="6807000" />
+      <workItem from="1597337168209" duration="1306000" />
+      <workItem from="1597509394608" duration="2785000" />
+      <workItem from="1597647996483" duration="14400000" />
+      <workItem from="1597750183467" duration="6364000" />
+      <workItem from="1597790141846" duration="3397000" />
+      <workItem from="1597842797068" duration="813000" />
+      <workItem from="1597874422685" duration="1766000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
