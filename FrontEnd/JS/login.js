@@ -35,6 +35,7 @@ function login() {
                     }
                     else{
                         console.log("failed");
+                        alert("login failed try again")
                     }
                 });
 
