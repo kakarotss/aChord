@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54ed7fb7-8c49-42df-895a-cc29223033e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/JS/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/controller/usersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/controller/usersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/service/adminUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/aChordBackEnd/src/main/java/com/qa/achord/service/adminUserService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +84,7 @@
       <workItem from="1597790141846" duration="3397000" />
       <workItem from="1597842797068" duration="813000" />
       <workItem from="1597874422685" duration="1766000" />
-      <workItem from="1597968019530" duration="57000" />
+      <workItem from="1597968019530" duration="816000" />
     </task>
     <servers />
   </component>

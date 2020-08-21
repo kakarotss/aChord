@@ -28,13 +28,10 @@ public class usersController {
 	
 	@PostMapping("/Register")
 	public List <users> registration(@RequestBody users user) {
-		
 		return userService.register(user);
 		
 	}
 	
-	
-
 	
 	@PostMapping("/Login")
 	public List <users> signin(@RequestBody users user) {

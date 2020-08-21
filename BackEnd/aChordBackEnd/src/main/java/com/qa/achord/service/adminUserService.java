@@ -21,7 +21,7 @@ public class adminUserService {
 	
 		return allUsers;
 	}
-	
+
 	
 	public String adminAddUser(users user) {
 		userRepo.save(user);
